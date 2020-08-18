@@ -26,6 +26,9 @@
     <UseSystemLibunwind Condition="'$(UseSystemLibunwind)' == ''">$(UseSystemLibraries)</UseSystemLibunwind>
     <UseStableVersions Condition="'$(UseStableVersions)' == ''">true</UseStableVersions>
   </PropertyGroup>
+  <PropertyGroup>
+    <LoongsonBuildCommandArgs Condition="'$(LoongsonBuild)' == 'true'">/p:DisableCrossgen=true /p:PortableBuild=true</LoongsonBuildCommandArgs>
+  </PropertyGroup>
 
   <!-- This repo's projects are entirely infrastructure and do not ship. -->
   <PropertyGroup>

@@ -12,6 +12,7 @@
     <BuildCommandArgs>$(BuildCommandArgs) --binaryLog</BuildCommandArgs>
     <BuildCommandArgs>$(BuildCommandArgs) -ci</BuildCommandArgs>
     <BuildCommandArgs>$(BuildCommandArgs) $(FlagParameterPrefix)nodereuse $(ArcadeFalseBoolBuildArg)</BuildCommandArgs>
+    <BuildCommandArgs>$(BuildCommandArgs) $(LoongsonBuildCommandArgs)</BuildCommandArgs>
     <BuildCommand>$(ProjectDirectory)build$(ShellExtension) $(BuildCommandArgs)</BuildCommand>
 
     <GlobalJsonFile>$(ProjectDirectory)global.json</GlobalJsonFile>

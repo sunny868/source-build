@@ -23,6 +23,7 @@
       is already loaded
     -->
     <BuildArguments>$(BuildArguments) $(FlagParameterPrefix)nodereuse $(ArcadeFalseBoolBuildArg)</BuildArguments>
+    <BuildArguments>$(BuildArguments) $(LoongsonBuildCommandArgs)</BuildArguments>
 
     <BuildCommand>$(ProjectDirectory)build$(ShellExtension) $(BuildArguments)</BuildCommand>
 

@@ -19,6 +19,7 @@
     <BuildCommandArgs>$(BuildCommandArgs) -ci</BuildCommandArgs>
 
     <BuildCommandArgs>$(BuildCommandArgs) /p:DotNetPackageVersionPropsPath=$(PackageVersionPropsPath)</BuildCommandArgs>
+    <BuildCommandArgs>$(BuildCommandArgs) $(LoongsonBuildCommandArgs)</BuildCommandArgs>
 
     <BuildCommand>$(ProjectDirectory)build$(ShellExtension) $(BuildCommandArgs)</BuildCommand>
     <DependencyVersionInputRepoApiImplemented>false</DependencyVersionInputRepoApiImplemented>

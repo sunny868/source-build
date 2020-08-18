@@ -36,6 +36,7 @@
       <BuildCommandBase>$(BuildCommandBase) /v:$(LogVerbosity)</BuildCommandBase>
       <BuildCommandBase>$(BuildCommandBase) /p:TreatWarningsAsErrors=false</BuildCommandBase>
       <BuildCommandBase>$(BuildCommandBase) /p:DotNetPackageVersionPropsPath=$(PackageVersionPropsPath)</BuildCommandBase>
+      <BuildCommandBase>$(BuildCommandBase) $(LoongsonBuildCommandArgs)</BuildCommandBase>
     </PropertyGroup>
 
     <Exec Command="$(BuildCommandBase) /t:RestoreXPLAT /bl:restore.binlog $(RedirectRepoOutputToLog)"

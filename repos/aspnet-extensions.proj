@@ -14,6 +14,7 @@
     <BuildCommandArgs>$(BuildCommandArgs) $(FlagParameterPrefix)warnAsError $(ArcadeFalseBoolBuildArg)</BuildCommandArgs>
     <!-- build all packages, not just the ones being serviced -->
     <BuildCommandArgs>$(BuildCommandArgs) /p:DisableServicingFeatures=true</BuildCommandArgs>
+    <BuildCommandArgs>$(BuildCommandArgs) $(LoongsonBuildCommandArgs)</BuildCommandArgs>
     <BuildCommand>$(ProjectDirectory)build$(ShellExtension) $(BuildCommandArgs)</BuildCommand>
 
     <GlobalJsonFile>$(ProjectDirectory)global.json</GlobalJsonFile>

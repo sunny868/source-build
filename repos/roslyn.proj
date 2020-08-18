@@ -16,6 +16,7 @@
     <BuildCommandArgs>$(BuildCommandArgs) /p:DotNetPackageVersionPropsPath=$(PackageVersionPropsPath)</BuildCommandArgs>
     <BuildCommandArgs>$(BuildCommandArgs) /p:DotNetBuildFromSource=true</BuildCommandArgs>
     <BuildCommandArgs>$(BuildCommandArgs) /p:UsingToolMicrosoftNetCompilers=false</BuildCommandArgs>
+    <BuildCommandArgs>$(BuildCommandArgs) $(LoongsonBuildCommandArgs)</BuildCommandArgs>
 
     <BuildCommand>$(ProjectDirectory)build$(ShellExtension) $(BuildCommandArgs)</BuildCommand>
 

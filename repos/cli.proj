@@ -28,6 +28,7 @@
     <BuildCommandArgs>$(BuildCommandArgs) -ci</BuildCommandArgs>
     <BuildCommandArgs>$(BuildCommandArgs) -v $(LogVerbosity)</BuildCommandArgs>
     <LogVerbosityOptOut>true</LogVerbosityOptOut>
+    <BuildCommandArgs>$(BuildCommandArgs) $(LoongsonBuildCommandArgs)</BuildCommandArgs>
 
     <BuildCommand>$(ProjectDirectory)build$(ShellExtension) $(BuildCommandArgs)</BuildCommand>
 

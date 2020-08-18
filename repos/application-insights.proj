@@ -23,6 +23,7 @@
       <BuildCommandArgs>$(BuildCommandArgs) /p:RelativeOutputPathBase=</BuildCommandArgs>
       <BuildCommandArgs>$(BuildCommandArgs) /v:$(LogVerbosity)</BuildCommandArgs>
       <BuildCommandArgs>$(BuildCommandArgs) $(RedirectRepoOutputToLog)</BuildCommandArgs>
+      <BuildCommandArgs>$(BuildCommandArgs) $(LoongsonBuildCommandArgs)</BuildCommandArgs>
     </PropertyGroup>
 
     <Exec Command="$(DotnetToolCommand) restore /bl:restore.binlog $(BuildCommandArgs)  "

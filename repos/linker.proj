@@ -11,6 +11,7 @@
     <!-- These are intended to be auto-detected via NuGetRestoreTargets, but it doesn't seem to work. -->
     <BuildCommandArgs>$(BuildCommandArgs) /p:ILLinkBuild=true</BuildCommandArgs>
     <BuildCommandArgs>$(BuildCommandArgs) /p:NetStandard=true</BuildCommandArgs>
+    <BuildCommandArgs>$(BuildCommandArgs) $(LoongsonBuildCommandArgs)</BuildCommandArgs>
 
     <BuildCommand>$(DotNetCliToolDir)dotnet $(BuildCommandArgs)</BuildCommand>
 
