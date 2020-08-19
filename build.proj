@@ -163,7 +163,7 @@
           AfterTargets="Build"
           Condition="'$(OfflineBuild)' != 'true' and '$(OS)' != 'Windows_NT' and '$(SkipDownloadingPreviouslySourceBuiltPackages)' != 'true'">
     <PropertyGroup Condition="'$(DownloadSourceBuiltArtifactsTimeoutSeconds)' == ''">
-      <DownloadSourceBuiltArtifactsTimeoutSeconds>1500</DownloadSourceBuiltArtifactsTimeoutSeconds>
+      <DownloadSourceBuiltArtifactsTimeoutSeconds>15000</DownloadSourceBuiltArtifactsTimeoutSeconds>
     </PropertyGroup>
 
     <DownloadFileSB 
