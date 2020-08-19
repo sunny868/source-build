@@ -26,7 +26,10 @@
     <UseSystemLibunwind Condition="'$(UseSystemLibunwind)' == ''">$(UseSystemLibraries)</UseSystemLibunwind>
     <UseStableVersions Condition="'$(UseStableVersions)' == ''">true</UseStableVersions>
   </PropertyGroup>
+
+  <!-- Loongson added PropertyGroup. -->
   <PropertyGroup>
+    <LoongsonBuild Condition="'$(LoongsonBuild)' == ''">true</Platform>
     <LoongsonBuildCommandArgs Condition="'$(LoongsonBuild)' == 'true'">/p:DisableCrossgen=true /p:PortableBuild=true</LoongsonBuildCommandArgs>
   </PropertyGroup>
 
