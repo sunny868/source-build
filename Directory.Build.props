@@ -29,7 +29,7 @@
 
   <!-- Loongson added PropertyGroup. -->
   <PropertyGroup>
-    <LoongsonBuild Condition="'$(LoongsonBuild)' == ''">true</Platform>
+    <LoongsonBuild Condition="'$(LoongsonBuild)' == ''">true</LoongsonBuild>
     <LoongsonBuildCommandArgs Condition="'$(LoongsonBuild)' == 'true'">/p:DisableCrossgen=true /p:PortableBuild=true</LoongsonBuildCommandArgs>
   </PropertyGroup>
 
