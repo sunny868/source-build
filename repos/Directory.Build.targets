@@ -68,16 +68,20 @@
 
   <Target Name="ApplyPatches" Condition="Exists('$(PatchesDir)$(RepositoryName)') and '$(SkipPatches)' != 'true'">
     <ItemGroup>
-      <PatchesToApply Include="$(PatchesDir)$(RepositoryName)/*.patch" />
+      <PatchesToApply Include="$(PatchesDir)$(RepositoryName)/00*.patch" />
+      <MIPS64PatchesToApply Include="$(PatchesDir)$(RepositoryName)/*mips64*.patch" />
     </ItemGroup>
 
     <PropertyGroup>
       <PatchCommand>git --work-tree=$(ProjectDirectory) apply --ignore-whitespace --whitespace=nowarn</PatchCommand>
+      <MIPS64PatchCommand>patch -d $(ProjectDirectory) -p1 -i </MIPS64PatchCommand>
     </PropertyGroup>
 
     <Exec Command="$(PatchCommand) %(PatchesToApply.Identity)"
           WorkingDirectory="$(ProjectDirectory)"
           Condition="'@(PatchesToApply)' != ''" />
+    <Exec Command="$(MIPS64PatchCommand) %(MIPS64PatchesToApply.Identity)"
+          Condition="'@(MIPS64PatchesToApply)' != ''" />
   </Target>
 
   <Target Name="UpdateNuGetConfig"
